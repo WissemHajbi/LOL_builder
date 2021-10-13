@@ -1,6 +1,6 @@
 import sys
 import requests , bs4 , os , shutil
-from PyQt5.QtGui import QIcon
+from PyQt6.QtGui import QIcon
 
 from PyQt6.QtWidgets import QWidget , QApplication
 from PyQt6 import uic , QtGui
@@ -138,7 +138,7 @@ class window( QWidget ):
                         link = 'http:' + j['src']
                         if 'blet.png' not in link:
                             img = open(
-                                f'C:\\users\\wisse\\PycharmProjects\\LOL Builder\\abilities and Summoners\\'
+                                f'C:\\users\\wisse\\projects\\LOL Builder\\abilities and Summoners\\'
                                 f'{str( numberName )}.jpg' ,
                                 'wb' )
                             s = requests.get( link )
@@ -159,7 +159,7 @@ class window( QWidget ):
             for image in BuildImages:
                 numberBuildName += 1
                 link = image['src']
-                img = open( f'C:\\users\\wisse\\PycharmProjects\\LOL Builder\\Build\\{str( numberBuildName )}.jpg' ,
+                img = open( f'C:\\users\\wisse\\projects\\LOL Builder\\Build\\{str( numberBuildName )}.jpg' ,
                             'wb' )
                 s = requests.get( link )
                 img.write( s.content )
@@ -170,14 +170,14 @@ class window( QWidget ):
                 numberBuildName += 1
                 link = image['src']
                 img = open(
-                    f'C:\\users\\wisse\\PycharmProjects\\LOL Builder\\Build\\Starting items\\'
+                    f'C:\\users\\wisse\\projects\\LOL Builder\\Build\\Starting items\\'
                     f'{str( numberBuildName )}.jpg' ,
                     'wb' )
                 s = requests.get( link )
                 img.write( s.content )
             # nasna3 folder w nadhfou
             folderprename = 'Runes'
-            pathFolder = r'C:\Users\wisse\PycharmProjects\LOL Builder'
+            pathFolder = r'C:\Users\wisse\projects\LOL Builder'
             if os.path.exists( pathFolder + '\\' + folderprename ):
                 shutil.rmtree( pathFolder + '\\' + folderprename )
             os.mkdir( pathFolder + '\\' + folderprename )
@@ -216,7 +216,7 @@ class window( QWidget ):
                     QtGui.QPixmap( pathFolder + '\\Build\\Starting items\\' + str( i + 1 ) + '.jpg' ) )
             self.abdash1.setText( '>' )
             self.abdash2.setText( '>' )
-            img = open( 'C:\\users\\wisse\\PycharmProjects\\LOL Builder\\profile.jpg' , 'wb' )
+            img = open( 'C:\\users\\wisse\\projects\\LOL Builder\\profile.jpg' , 'wb' )
             profileImageRequest = requests.get( profileImageLink )
             img.write( profileImageRequest.content )
             self.ProfilePicLabel.setPixmap( QtGui.QPixmap( pathFolder + '\\' + 'profile.jpg' ) )

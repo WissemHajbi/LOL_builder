@@ -1,6 +1,8 @@
 welcome to my league of legends build manager
 i am wissem hajbi and this is how to use my app 
 
+<img src="https://user-images.githubusercontent.com/76587329/140627649-19f6d50e-69c4-433b-aeec-3f4460c28796.png" height="400">
+
 1 - ENTER THE CHAMPION NAME IN THE CHAMPION FIELD
 
 2 - CLICK ON ROLES SEARCH
